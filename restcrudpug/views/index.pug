@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p TITOLO A CASO 
+
+  each r in re
+    h1 Unit: #{r.Unit}
+    img(src=`/images/${r.Unit}.png`) 
+    a(href=`/dettagli/${r.Unit}`) Click for details of: #{r.Unit} hr
+
