@@ -3,9 +3,15 @@ extends layout
 block content
   h1= title
   p TITOLO A CASO 
-
+  ul
+    li
+      a.active(href='/') Elenco Unità
+    li
+      a(href='/addUnit') Nuova Unità
+  br
   each r in re
     h1 Unit: #{r.Unit}
     img(src=`/images/${r.Unit}.png`) 
-    a(href=`/dettagli/${r.Unit}`) Click for details of: #{r.Unit} hr
+    a(href=`/dettagli/${r.Unit}`) Click for details of: #{r.Unit} 
+    hr
 
